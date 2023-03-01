@@ -18,7 +18,7 @@ describe("Calculator", () => {
     cy.get("#operator_add").click();
     cy.get("#number2").click();
     cy.get("#operator-equals").click();
-    cy.get(".display").should("contain", "2");
+    cy.get(".display").should("contain", "3");
   });
 
   it("calculator can handle multiple operators which can be chained together", () => {
@@ -79,6 +79,6 @@ describe("Calculator", () => {
     cy.get("#operator-divide").click();
     cy.get("#number0").click();
     cy.get("#operator-equals").click();
-    cy.get(".display").should("contain", "Error!");
+    cy.get(".display").should("contain", "ERROR");
   });
 });
